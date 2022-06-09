@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MauLapor-Tambah | Admin</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../favicon/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="borderkanan admin bg-abu-abu" id="sidebar-wrapper">
+        <div class="sidebar-heading bg-hitam tengah">
+          <img src="../img/logo/logo.png" class="logo" alt="" />
+        </div>
+        <div class="list-group">
+          <div class="tengah p-2 menu">
+            <a class="" href="index.html"
+              ><i class="fas fa-book"></i> Koleksi</a
+            >
+          </div>
+          <div class="tengah p-2 menu">
+            <a class="" href="laporan.html"
+              ><i class="fas fa-paper-plane"></i>Laporan</a
+            >
+          </div>
+          <div class="tengah p-2 menu">
+            <a class="" href="tambah.html"
+              ><i class="fas fa-plus-square"></i>Tambah</a
+            >
+          </div>
+          <div class="tengah p-2 menu">
+            <a class="" href="#"><i class="fas fa-reply"></i>Logout</a>
+          </div>
+        </div>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper " class="wrap" style="width: 100%">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg border-bottom p-2 py-3">
+          <div class="container">
+            <i
+              class="fas fa-arrow-right"
+              style="cursor: pointer"
+              id="sidebarToggle"
+            ></i>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container pt50 pb50">
+          <h2 class="kuning">Tambah data</h2>
+          <form action="">
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="gambar tengah">
+                  <div class="form-input">
+                    <div class="preview">
+                      <img
+                        id="file-ip-1-preview"
+                        src="../img/uploadgambar/uploadgambar.jpg"
+                      />
+                    </div>
+                    <label for="file-ip-1" class="mt20 tengah">
+                      <div class="btn btn-hitam">upload</div>
+                    </label>
+                    <div class="d-none">
+                      <input
+                        required
+                        type="file"
+                        id="file-ip-1"
+                        accept="image/*"
+                        onchange="showPreview(event);"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="namabenda mt-5">
+                  <label for="namabenda">Nama Benda :</label>
+                  <input
+                    required
+                    class="w-100 ps-3 p-2 mt-2"
+                    id="namabenda"
+                    type="text"
+                  />
+                </div>
+                <div class="penemu mt-4">
+                  <label for="penemu">Penemu :</label>
+                  <input
+                    required
+                    class="w-100 ps-3 p-2 mt-2"
+                    id="penemu"
+                    type="text"
+                  />
+                </div>
+                <div class="nik mt-4">
+                  <label for="nik">NIK :</label>
+                  <input
+                    required
+                    type="number"
+                    class="w-100 mt-2 ps-3 p-2"
+                    id="nik"
+                  />
+                </div>
+                <div class="tanggal mt-4">
+                  <label for="tanggal">Tanggal Penemuan :</label>
+                  <input
+                    required
+                    type="date"
+                    class="w-100 mt-2 ps-3 p-2"
+                    id="nik"
+                  />
+                </div>
+                <div class="Lokasi mt-4">
+                  <label for="lokasi">Lokasi Penemuan :</label>
+                  <textarea
+                    required
+                    name=""
+                    id="lokasi"
+                    class="w-100"
+                  ></textarea>
+                </div>
+                <div class="alamat mt-4">
+                  <label for="alamat">Alamat Penemu :</label>
+                  <textarea
+                    required
+                    name=""
+                    id="alamat"
+                    class="w-100"
+                  ></textarea>
+                </div>
+                <div class="nomor mt-4">
+                  <label for="nomor">Nomor Hubung :</label>
+                  <input
+                    required
+                    type="number"
+                    class="w-100 mt-2 ps-3 p-2"
+                    id="nomor"
+                  />
+                </div>
+                <div class="submite mt-4 justify-content-end d-flex">
+                  <button type="submit" class="btn btn-hitam w-100 tengah">
+                    Tambah
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <!-- script preview gambar -->
+    <script>
+      function showPreview(event) {
+        if (event.target.files.length > 0) {
+          var src = URL.createObjectURL(event.target.files[0]);
+          var preview = document.getElementById("file-ip-1-preview");
+          preview.src = src;
+          preview.style.display = "block";
+          preview.style.height = "100%";
+          preview.style.width = "100%";
+        }
+      }
+    </script>
+  </body>
+</html>
